@@ -79,6 +79,15 @@ function populateDisplay(button) {
   // TODO when operator, equals, or clear pressed, re-enable buttons for . and %
 }
 
+function operate(operator, a, b) {
+  let answer;
+  operator == '+' ? answer = add(a, b)
+  : operator == '-' ? answer = subtract(a, b)
+  : operator == '*' ? answer = multiply(a, b)
+  : operator == '/' ? answer = divide(a, b)
+  :  answer = 'You a big dummy, Fry';
+  return answer;
+}
 
 function add(a, b) {
   return a + b;
@@ -94,14 +103,4 @@ function multiply(a, b) {
 
 function divide(a, b) {
   return a / b;
-}
-
-function operate(operator, a, b) {
-  let answer;
-  operator == '+' ? answer = add(a, b)
-  : operator == '-' ? answer = subtract(a, b)
-  : operator == '*' ? answer = multiply(a, b)
-  : operator == '/' ? answer = divide(a, b)
-  :  answer = 'You a big dummy, Fry';
-  return answer;
 }
